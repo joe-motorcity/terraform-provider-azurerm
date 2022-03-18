@@ -20,7 +20,7 @@ func TestIntegrationAccountMapName(t *testing.T) {
 			valid: true,
 		},
 		{
-			input: "a2-.()b",
+			input: "a2_-.()b",
 			valid: true,
 		},
 		{
