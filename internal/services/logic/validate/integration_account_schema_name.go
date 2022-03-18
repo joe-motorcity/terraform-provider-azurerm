@@ -20,8 +20,8 @@ func IntegrationAccountSchemaName() pluginsdk.SchemaValidateFunc {
 			return
 		}
 
-		if !regexp.MustCompile(`^[A-Za-z0-9-().]+$`).MatchString(v) {
-			errors = append(errors, fmt.Errorf("%q contains only letters, numbers, dots, parentheses and hyphens.", k))
+		if !regexp.MustCompile(`^[A-Za-z0-9_-().]+$`).MatchString(v) {
+			errors = append(errors, fmt.Errorf("%q contains only letters, numbers, dots, parentheses, underscores and hyphens.", k))
 			return
 		}
 
